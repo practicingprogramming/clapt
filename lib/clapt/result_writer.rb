@@ -1,3 +1,5 @@
+require 'colorize'
+
 module Clapt
   # Result writer.
   class ResultWriter
@@ -6,9 +8,9 @@ module Clapt
 
     def update(test_result)
       if test_result.success?
-        Kernel.puts "Test succeeded: #{test_result.test.name}"
+        Kernel.puts "Test succeeded: #{test_result.test.name}".green
       else
-        Kernel.puts "Test failed: #{test_result.test.name}"
+        Kernel.puts "Test failed: #{test_result.test.name}".red
       end
     end
 

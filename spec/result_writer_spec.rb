@@ -10,8 +10,8 @@ describe Clapt::ResultWriter do
     end
 
     it 'writes test results' do
-      expect(Kernel).to have_received(:puts).with 'Test succeeded: success'
-      expect(Kernel).to have_received(:puts).with 'Test failed: failure'
+      expect(Kernel).to have_received(:puts).with 'Test succeeded: success'.green
+      expect(Kernel).to have_received(:puts).with 'Test failed: failure'.red
     end
   end
 end

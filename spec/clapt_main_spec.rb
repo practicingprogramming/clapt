@@ -10,7 +10,6 @@ describe Clapt::ClaptMain do
       @clapt_main = Clapt::ClaptMain.new(
         test_discoverer: @test_discoverer,
         directory: 'test_dir',
-        result_writer: Clapt::ResultWriter.new,
         test_runner: @test_runner,
         result_writer: @result_writer
       )

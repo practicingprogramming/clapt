@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ruby `pwd`/lib/clapt.rb "$@"
+bundle exec `pwd`/lib/clapt.rb "$@"
