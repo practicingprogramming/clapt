@@ -9,11 +9,10 @@ module Clapt
     end
 
     def run
-      test_registry = @test_discoverer.discover(@directory)
-      puts "Tests: #{TestRegistry.instance.tests}"
+      @test_discoverer.discover(@directory)
       test_suite_run_result = TestSuiteRunResult.new
       test_suite_run_result.add_observer(@result_writer)
-      @test_runner.run(test_registry, test_suite_run_result)
+      @test_runner.run(TestRegistry.instance, test_suite_run_result)
     end
   end
 end

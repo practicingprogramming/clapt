@@ -9,6 +9,8 @@ end
 
 main = Clapt::ClaptMain.new(
   test_discoverer: Clapt::TestDiscoverer.new,
+  test_runner: Clapt::TestRunner.new,
+  result_writer: Clapt::ResultWriter.new,
   directory: ARGV[0]
 )
 main.run
