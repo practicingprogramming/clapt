@@ -1,6 +1,8 @@
 module Clapt
   # Test case.
   class Test
+    attr_reader :name
+
     def initialize(name, &block)
       @name = name
       @block = block
