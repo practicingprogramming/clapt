@@ -1,0 +1,15 @@
+module Clapt
+  # Test Runner
+  class TestRunner
+    def run(test_registry, test_suite_run_result)
+      test_registry.tests.each do |test|
+        begin
+          test.run
+          test_suite_run_result.add(TestRunResult.new(test, true))
+        rescue
+          test_suite_run_result.add(TestRunResult.new(test, false))
+        end
+      end
+    end
+  end
+end
