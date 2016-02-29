@@ -10,7 +10,7 @@ module Clapt
     end
 
     def run
-      @block.call
+      @block.call(self)
     end
   end
 end
