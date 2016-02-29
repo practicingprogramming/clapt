@@ -6,7 +6,7 @@ module Clapt
         begin
           test.run
           test_suite_run_result.add(TestRunResult.new(test, true))
-        rescue Exception => e
+        rescue StandardError => e
           test_suite_run_result.add(TestRunResult.new(test, false))
           puts e.inspect
         end
